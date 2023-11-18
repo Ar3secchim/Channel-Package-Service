@@ -22,7 +22,7 @@ spring:
 
 ## Enabling database connection
 datasource:
-  url: jdbc:postgresql://localhost:<port>/<db>
+  url: jdbc:mysql://localhost:<port>/<db>
   username: package
   password: package
   continue-on-error: true

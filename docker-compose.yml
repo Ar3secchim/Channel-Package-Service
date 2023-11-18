@@ -1,14 +1,12 @@
 version: '3.7'
 services:
   mysql:
-    image: postgres:10
+    image: mysql
     container_name: postgres_service_package
     ports:
-      - "5433:5432"
+      - "3306:3306"
     environment:
-      POSTGRES_PASSWORD: package
-      POSTGRES_USER: package
-      POSTGRES_DB: package
+      MYSQL_ROOT_PASSWORD: package
     restart: always
 
   # rabbit:
