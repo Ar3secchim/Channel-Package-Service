@@ -1,0 +1,37 @@
+{"properties": [
+  {
+    "name": "rabbitmq.host",
+    "type": "java.lang.String",
+    "description": "A description for 'rabbitmq.host'"
+  },
+  {
+    "name": "rabbitmq.port",
+    "type": "java.lang.String",
+    "description": "A description for 'rabbitmq.port'"
+  },
+  {
+    "name": "rabbitmq.password",
+    "type": "java.lang.String",
+    "description": "A description for 'rabbitmq.password'"
+  },
+  {
+    "name": "rabbitmq.cache.connection.mode",
+    "type": "java.lang.String",
+    "description": "A description for 'rabbitmq.cache.connection.mode'"
+  },
+  {
+    "name": "rabbitmq.username",
+    "type": "java.lang.String",
+    "description": "A description for 'rabbitmq.username'"
+  },
+  {
+    "name": "rabbitmq.cache.checkout-timeout",
+    "type": "java.lang.String",
+    "description": "A description for 'rabbitmq.cache.checkout-timeout'"
+  },
+  {
+    "name": "rabbitmq.cache.channel.size",
+    "type": "java.lang.String",
+    "description": "A description for 'rabbitmq.cache.channel.size'"
+  }
+]}
