@@ -1,8 +1,5 @@
 package ada.tech.tenthirty.tvpackages.entity;
 
-import java.math.BigDecimal;
-import java.util.List;
-
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
