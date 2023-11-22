@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping(name = "/")
 @RequiredArgsConstructor
-public class HelloWorldController {
+public class PackegeController {
 
     @Operation(summary = "Get all packages")
     @ApiResponses(value = {
