@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping(name = "/")
 @RequiredArgsConstructor
-public class PackageController { 
+public class PackageController {
     private final GetPackageValues getPackageValues;
 
     @Operation(summary = "Get all packages")
