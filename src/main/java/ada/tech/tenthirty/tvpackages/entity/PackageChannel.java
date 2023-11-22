@@ -3,7 +3,9 @@ package ada.tech.tenthirty.tvpackages.entity;
 import java.math.BigDecimal;
 import java.util.List;
 
-import jakarta.persistence.*;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -23,8 +25,4 @@ public class Package {
 
   @Column(name="value")
   private BigDecimal value;
-
-  @Column(name="list_channel")
-  @OneToMany(mappedBy = "Package")
-  private List<Channel> listChannel;
 }

@@ -9,5 +9,5 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class InvoiceResponse {
-  List<PackageResponse> listPackages;
+  List<PackageChannel> listPackages;
 }
