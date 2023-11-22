@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Package {
+public class PackageChannel{
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private String id;
