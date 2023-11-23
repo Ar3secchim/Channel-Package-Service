@@ -3,7 +3,6 @@ package ada.tech.tenthirty.tvpackages.service;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import ada.tech.tenthirty.tvpackages.entity.PackageChannel;
@@ -11,11 +10,12 @@ import ada.tech.tenthirty.tvpackages.payloads.InvoiceRequest;
 import ada.tech.tenthirty.tvpackages.payloads.PackageRequest;
 import ada.tech.tenthirty.tvpackages.payloads.response.InvoiceResponse;
 import ada.tech.tenthirty.tvpackages.repository.PackageChannelRepository;
+import lombok.RequiredArgsConstructor;
 
 @Service
+@RequiredArgsConstructor
 public class GetPackageValues {
-  @Autowired
-  PackageChannelRepository packageRepository;
+  private final PackageChannelRepository packageRepository;
 
   public InvoiceResponse execute(InvoiceRequest invoiceRequest){
     List<PackageRequest> listPackages = invoiceRequest.getListPackages();

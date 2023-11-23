@@ -32,18 +32,20 @@ jpa:
   format-sql: true
   hibernate:
     ddl-auto: update
-  database-platform: org.hibernate.dialect.PostgreSQLDialect
+  database-platform: org.hibernate.dialect.mysql
   properties:
     hibernate:
       jdbc:
         batch_size: 50
 
-
-# Enable liquidbase
-liquibase:
-  enabled: true
-  change-log: classpath:db/changelog/changelog-local.xml
-
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+    url: jdbc:mysql://localhost:3306/subscription
+    username: root
+    password: package
+    driver-class-name: com.mysql.jdbc.Driver
+    schemas: package
 
 ## Enabling rabbitmq
 # rabbitmq:
