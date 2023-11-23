@@ -5,4 +5,3 @@ CREATE TABLE channels (
   name VARCHAR(255),
   category VARCHAR(30)
 )
-
