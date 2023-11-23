@@ -10,8 +10,6 @@ import org.springframework.stereotype.Service;
 import ada.tech.tenthirty.tvpackages.payloads.InvoiceRequest;
 import ada.tech.tenthirty.tvpackages.payloads.PackageRequest;
 import ada.tech.tenthirty.tvpackages.payloads.response.InvoiceResponse;
-import ada.tech.tenthirty.tvpackages.payloads.response.PackageResponse;
-import ada.tech.tenthirty.tvpackages.repository.PackageRepository;
 
 @Service
 public class GetPackageValues {

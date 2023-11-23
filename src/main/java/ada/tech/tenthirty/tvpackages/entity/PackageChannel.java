@@ -6,6 +6,8 @@ import java.util.List;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -23,6 +25,9 @@ public class Package {
   @Column(name="package_id")
   private String packageId;
 
-  @Column(name="value")
+  @Column(name="list_channel")
+  @OneToMany(mappedBy = "PackageChannel")
+  private List<Channel> listChannel;  
+  
   private BigDecimal value;
 }
