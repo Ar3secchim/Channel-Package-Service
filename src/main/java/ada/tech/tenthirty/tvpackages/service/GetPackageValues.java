@@ -10,12 +10,14 @@ import org.springframework.stereotype.Service;
 import ada.tech.tenthirty.tvpackages.payloads.InvoiceRequest;
 import ada.tech.tenthirty.tvpackages.payloads.PackageRequest;
 import ada.tech.tenthirty.tvpackages.payloads.response.InvoiceResponse;
-import lombok.RequiredArgsConstructor;
 
 @Service
-@RequiredArgsConstructor
 public class GetPackageValues {
   private final PackageRepository packageRepository;
+
+  public GetPackageValues(PackageRepository packageRepository) {
+    this.packageRepository = packageRepository;
+  }
 
   public InvoiceResponse execute(InvoiceRequest invoiceRequest){
     List<PackageRequest> listPackages = invoiceRequest.getListPackages();

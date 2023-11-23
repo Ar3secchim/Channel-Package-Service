@@ -17,9 +17,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping(name = "/")
-@RequiredArgsConstructor
 public class PackageController {
     private final GetPackageValues getPackageValues;
+
+    public PackageController(GetPackageValues getPackageValues) {
+        this.getPackageValues = getPackageValues;
+    }
 
     @Operation(summary = "Get all packages")
     @ApiResponses(value = {
