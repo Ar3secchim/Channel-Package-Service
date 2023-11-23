@@ -14,7 +14,6 @@ import ada.tech.tenthirty.tvpackages.payloads.response.PackageResponse;
 import ada.tech.tenthirty.tvpackages.repository.PackageRepository;
 
 @Service
-@RequiredArgsConstructor
 public class GetPackageValues {
   @Autowired
   PackageRepository packageRepository;
