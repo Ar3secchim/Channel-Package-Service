@@ -18,16 +18,13 @@ public class Package {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private String id;
 
-  @Column(name="sku_id")
-  private String skuId;
-
-  @Column(name="name")
-  private String name;
+  @Column(name="package_id")
+  private String packageId;
 
   @Column(name="value")
   private BigDecimal value;
 
-  @OneToMany
-  @JoinColumn(name="list_channels")
-  private List<Channel> listChannels;
+  @Column(name="list_channel")
+  @OneToMany(mappedBy = "Package")
+  private List<Channel> listChannel;
 }
