@@ -5,5 +5,5 @@ CREATE TABLE channels (
     identifier INTEGER,
     name VARCHAR(255),
     category VARCHAR(255),
-    FOREIGN KEY (package_id) REFERENCES package(id)
+    FOREIGN KEY (package_id) REFERENCES packages(id)
  )
