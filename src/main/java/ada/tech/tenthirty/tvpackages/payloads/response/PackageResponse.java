@@ -6,7 +6,7 @@ import lombok.Data;
 
 @Data
 public class PackageResponse{
-  private String transitionId;
-  private BigDecimal value;
-  private BigDecimal valuePromotions;
+  private String packageId;
+  private BigDecimal packageValue;
+  private Integer valueDeal;
 }

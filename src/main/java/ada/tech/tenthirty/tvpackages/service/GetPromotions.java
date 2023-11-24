@@ -1,17 +1,14 @@
 package ada.tech.tenthirty.tvpackages.service;
 
 import ada.tech.tenthirty.tvpackages.entity.Promotion;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
+
 import org.springframework.stereotype.Service;
 
 @Service
+@RequiredArgsConstructor
 public class GetPromotions {
-  private final HttpPromotions httpCustom;
-
-  @Autowired
-  public GetPromotions(HttpPromotions httpCustom) {
-    this.httpCustom = httpCustom;
-  }
+  private final WebClientService httpCustom;
 
   public Integer getPromotionPackage(String idPackage) {
     Promotion promotionResponse = httpCustom.getPromotions(idPackage);
