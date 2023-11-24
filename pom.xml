@@ -91,6 +91,18 @@
 	<build>
 		<plugins>
 			<plugin>
+				<groupId>org.flywaydb</groupId>
+				<artifactId>flyway-maven-plugin</artifactId>
+				<version>9.16.3</version> <!-- Use a versão mais recente disponível -->
+				<configuration>
+					<url>jdbc:mysql://localhost:3306/</url>
+					<user>root</user>
+					<password>subscription</password>
+					<schemas>subscription</schemas>
+				</configuration>
+			</plugin>
+			<plugin>
+
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
@@ -107,5 +119,20 @@
 			</plugin>
 		</plugins>
 	</build>
+
+	<dependencyManagement>
+		<dependencies>
+		<dependency>
+			<groupId>org.flywaydb</groupId>
+			<artifactId>flyway-core</artifactId>
+			<version>9.15.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.flywaydb</groupId>
+			<artifactId>flyway-mysql</artifactId>
+		</dependency>
+		</dependencies>
+	</dependencyManagement>
+
 
 </project>
