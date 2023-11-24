@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>ada.tech.tenthirty.tvpackages</groupId>
-	<artifactId>default-archetype</artifactId>
+	<artifactId>package-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>default-archetype</name>
+	<name>package-service</name>
 	<description>Spring Boot Structure for ada ten thirty projects</description>
 	<properties>
 		<java.version>17</java.version>
