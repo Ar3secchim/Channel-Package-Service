@@ -33,5 +33,10 @@
     "name": "rabbitmq.cache.channel.size",
     "type": "java.lang.String",
     "description": "A description for 'rabbitmq.cache.channel.size'"
+  },
+  {
+    "name": "datasource.url",
+    "type": "java.lang.String",
+    "description": "A description for 'datasource.url'"
   }
 ]}
