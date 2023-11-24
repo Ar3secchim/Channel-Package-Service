@@ -3,13 +3,7 @@ package ada.tech.tenthirty.tvpackages.entity;
 import java.math.BigDecimal;
 import java.util.List;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -18,18 +12,22 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "package_channel")
-public class PackageChannel{
+@Table(name="packages")
+public class Package {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private String id;
 
-  @Column(name="transaction_id")
-  private String transactionId;
+  @Column(name="sku_id")
+  private String skuId;
 
-  @Column(name="list_channel")
-  @OneToMany(mappedBy = "PackageChannel")
-  private List<Channel> listChannel;  
-  
+  @Column(name="name")
+  private String name;
+
+  @Column(name="value")
   private BigDecimal value;
+
+  @OneToMany
+  @JoinColumn(name="list_channels")
+  private List<Channel> listChannels;
 }
