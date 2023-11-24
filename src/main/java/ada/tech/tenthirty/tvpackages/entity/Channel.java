@@ -15,8 +15,12 @@ public class Channel {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private String id;
 
-  @Column(name="sku_id")
-  private String skuId;
+  @Column(name="channel_id")
+  private String channelId;
+
+  @ManyToOne
+  @JoinColumn(name = "package_id")
+  private Package Package;
 
   @Column(name="identifier")
   private Integer identifier;
@@ -24,6 +28,6 @@ public class Channel {
   @Column(name="name")
   private String name;
 
-  @Enumerated
+  @Enumerated(EnumType.STRING)
   private Category category;
 }
