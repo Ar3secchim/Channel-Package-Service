@@ -8,5 +8,4 @@ services:
     environment:
       MYSQL_DATABASE: package
       MYSQL_ROOT_PASSWORD: package
-      MYSQL_DATABASE: package
     restart: always
