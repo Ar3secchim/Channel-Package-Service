@@ -1,4 +1,4 @@
-package ada.tech.tenthirty.tvpackages.rest;
+package ada.tech.tenthirty.tvpackages.service;
 
 import ada.tech.tenthirty.tvpackages.entity.Package;
 import ada.tech.tenthirty.tvpackages.repository.PackageRepository;

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 @Service
 @RequiredArgsConstructor
 public class GetPromotions {
-  private final WebClientService httpCustom;
+  private final HtppCustom httpCustom;
 
   public Integer getPromotionPackage(String idPackage) {
     Promotion promotionResponse = httpCustom.getPromotions(idPackage);
