@@ -8,10 +8,10 @@ import org.springframework.stereotype.Service;
 @Service
 @RequiredArgsConstructor
 public class GetPromotions {
-  private final HtppCustom httpCustom;
+  private final PromotionsService promotionsService;
 
   public Integer getPromotionPackage(String idPackage) {
-    Promotion promotionResponse = httpCustom.getPromotions(idPackage);
+    Promotion promotionResponse = promotionsService.getPromotions(idPackage);
 
     if (promotionResponse != null) {
       return promotionResponse.getValuePromotions();
