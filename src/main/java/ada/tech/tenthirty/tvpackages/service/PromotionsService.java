@@ -20,13 +20,13 @@ public class PromotionsService {
   }
 
   public Promotion getPromotions(String idPackage) {
-    URL = "http://localhost:3000/promotions" + idPackage;
+    URL = "http://localhost:3000"
 
     try {
       WebClient webClient = webClient();
     
       Promotion promotion = webClient.get()
-              .uri(uriBuilder -> uriBuilder.path("/{idPackage}").build(idPackage))
+              .uri(uriBuilder -> uriBuilder.path("/promotions").build(idPackage))
               .retrieve()
               .onStatus(
                       status -> !status.is2xxSuccessful(),
